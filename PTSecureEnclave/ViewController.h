@@ -7,9 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PTSecureEnclaveServiceDelegate.h"
 
-@interface ViewController : UIViewController
+@protocol PTSecureEnclaveService, PTLocalStorage;
 
+@interface ViewController : UIViewController <PTSecureEnclaveServiceDelegate>
+
+@property (strong, nonatomic) id<PTSecureEnclaveService> secureEnclaveService;
+@property (strong, nonatomic) id<PTLocalStorage> localStorage;
 
 @end
 

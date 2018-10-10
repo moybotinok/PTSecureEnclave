@@ -13,6 +13,8 @@
 		EEFD912A216E98A800F38CA5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EEFD9129216E98A800F38CA5 /* Assets.xcassets */; };
 		EEFD912D216E98A800F38CA5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EEFD912B216E98A800F38CA5 /* LaunchScreen.storyboard */; };
 		EEFD9130216E98A800F38CA5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EEFD912F216E98A800F38CA5 /* main.m */; };
+		EEFD913E216EA4D800F38CA5 /* PTSecureEnclaveServiceImplementation.m in Sources */ = {isa = PBXBuildFile; fileRef = EEFD913D216EA4D800F38CA5 /* PTSecureEnclaveServiceImplementation.m */; };
+		EEFD9144216EA74100F38CA5 /* PTLocalStorageImplementation.m in Sources */ = {isa = PBXBuildFile; fileRef = EEFD9143216EA74100F38CA5 /* PTLocalStorageImplementation.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,13 @@
 		EEFD912C216E98A800F38CA5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EEFD912E216E98A800F38CA5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EEFD912F216E98A800F38CA5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		EEFD913C216EA4D800F38CA5 /* PTSecureEnclaveServiceImplementation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PTSecureEnclaveServiceImplementation.h; sourceTree = "<group>"; };
+		EEFD913D216EA4D800F38CA5 /* PTSecureEnclaveServiceImplementation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PTSecureEnclaveServiceImplementation.m; sourceTree = "<group>"; };
+		EEFD913F216EA4E800F38CA5 /* PTSecureEnclaveService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PTSecureEnclaveService.h; sourceTree = "<group>"; };
+		EEFD9141216EA71C00F38CA5 /* PTLocalStorage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PTLocalStorage.h; sourceTree = "<group>"; };
+		EEFD9142216EA74100F38CA5 /* PTLocalStorageImplementation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PTLocalStorageImplementation.h; sourceTree = "<group>"; };
+		EEFD9143216EA74100F38CA5 /* PTLocalStorageImplementation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PTLocalStorageImplementation.m; sourceTree = "<group>"; };
+		EEFD9145216EBA4B00F38CA5 /* PTSecureEnclaveServiceDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PTSecureEnclaveServiceDelegate.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,17 +67,48 @@
 		EEFD911F216E98A700F38CA5 /* PTSecureEnclave */ = {
 			isa = PBXGroup;
 			children = (
-				EEFD9120216E98A700F38CA5 /* AppDelegate.h */,
-				EEFD9121216E98A700F38CA5 /* AppDelegate.m */,
+				EEFD9140216EA6FA00F38CA5 /* LocalStorage */,
+				EEFD9138216E9F8C00F38CA5 /* SecureEnclave */,
+				EEFD9126216E98A700F38CA5 /* Main.storyboard */,
 				EEFD9123216E98A700F38CA5 /* ViewController.h */,
 				EEFD9124216E98A700F38CA5 /* ViewController.m */,
-				EEFD9126216E98A700F38CA5 /* Main.storyboard */,
+				EEFD9137216E990600F38CA5 /* Suppotring */,
+			);
+			path = PTSecureEnclave;
+			sourceTree = "<group>";
+		};
+		EEFD9137216E990600F38CA5 /* Suppotring */ = {
+			isa = PBXGroup;
+			children = (
+				EEFD9120216E98A700F38CA5 /* AppDelegate.h */,
+				EEFD9121216E98A700F38CA5 /* AppDelegate.m */,
 				EEFD9129216E98A800F38CA5 /* Assets.xcassets */,
 				EEFD912B216E98A800F38CA5 /* LaunchScreen.storyboard */,
 				EEFD912E216E98A800F38CA5 /* Info.plist */,
 				EEFD912F216E98A800F38CA5 /* main.m */,
 			);
-			path = PTSecureEnclave;
+			path = Suppotring;
+			sourceTree = "<group>";
+		};
+		EEFD9138216E9F8C00F38CA5 /* SecureEnclave */ = {
+			isa = PBXGroup;
+			children = (
+				EEFD913F216EA4E800F38CA5 /* PTSecureEnclaveService.h */,
+				EEFD9145216EBA4B00F38CA5 /* PTSecureEnclaveServiceDelegate.h */,
+				EEFD913C216EA4D800F38CA5 /* PTSecureEnclaveServiceImplementation.h */,
+				EEFD913D216EA4D800F38CA5 /* PTSecureEnclaveServiceImplementation.m */,
+			);
+			path = SecureEnclave;
+			sourceTree = "<group>";
+		};
+		EEFD9140216EA6FA00F38CA5 /* LocalStorage */ = {
+			isa = PBXGroup;
+			children = (
+				EEFD9141216EA71C00F38CA5 /* PTLocalStorage.h */,
+				EEFD9142216EA74100F38CA5 /* PTLocalStorageImplementation.h */,
+				EEFD9143216EA74100F38CA5 /* PTLocalStorageImplementation.m */,
+			);
+			path = LocalStorage;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -142,8 +182,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				EEFD9125216E98A700F38CA5 /* ViewController.m in Sources */,
+				EEFD913E216EA4D800F38CA5 /* PTSecureEnclaveServiceImplementation.m in Sources */,
 				EEFD9130216E98A800F38CA5 /* main.m in Sources */,
 				EEFD9122216E98A700F38CA5 /* AppDelegate.m in Sources */,
+				EEFD9144216EA74100F38CA5 /* PTLocalStorageImplementation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,7 +329,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 68G4LPYNS6;
-				INFOPLIST_FILE = PTSecureEnclave/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/PTSecureEnclave/Suppotring/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -304,7 +347,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 68G4LPYNS6;
-				INFOPLIST_FILE = PTSecureEnclave/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/PTSecureEnclave/Suppotring/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
